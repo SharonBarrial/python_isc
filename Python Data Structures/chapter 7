@@ -1,0 +1,75 @@
+Where are files stored?
+✅ Secondary memory
+Explanation: Files are stored on secondary memory (e.g., hard drives, SSDs, USB drives) for long-term storage.
+
+What is stored in a "file handle" returned from open()?
+✅ The handle is a connection to the file's data
+Explanation: A file handle is a reference to the file, allowing Python to read from or write to it without loading all the data into memory.
+
+What does the second parameter of open() indicate?
+✅ Whether we want to read data from the file or write data to the file
+Explanation:
+
+"r" → Read mode
+
+"w" → Write mode
+
+"a" → Append mode
+
+"rb"/"wb" → Binary modes
+
+Which Python function prompts the user for a file name?
+✅ input()
+Explanation: input() gets user input as a string, which can then be used as a file name.
+
+What is the purpose of the newline character (\n) in text files?
+✅ It indicates the end of one line of text and the beginning of another line of text
+Explanation: Text files use \n to separate lines. Without it, all text would appear on a single line.
+
+What statement reads a file one line at a time?
+✅ for line in xfile:
+Explanation: This loop iterates over each line in the file, reading one line at a time.
+
+What does the following Python code do?
+
+python
+Copy
+Edit
+fhand = open('mbox.txt')
+x = 0
+for line in fhand:
+    x = x + 1
+print(x)
+✅ Counts the lines in the file 'mbox.txt'
+Explanation: The loop iterates over each line in the file, incrementing x for every line, which gives the total line count.
+
+Which Python string function removes extra blank lines?
+✅ rstrip()
+Explanation:
+
+rstrip() removes trailing whitespace (including extra newlines) from a string.
+
+Useful when reading files where lines may have extra newlines.
+
+How do you prevent a program from crashing when a file does not exist?
+✅ try / except
+Explanation:
+
+python
+Copy
+Edit
+try:
+    fhand = open(fname)
+except:
+    print("Error: File not found")
+This catches the error and allows the program to continue instead of crashing.
+
+What does this Python code do?
+
+python
+Copy
+Edit
+fhand = open('mbox-short.txt')
+inp = fhand.read()
+✅ Reads the entire file into the variable inp as a string
+Explanation: The .read() method loads the entire file content into a string variable.
