@@ -1,0 +1,39 @@
+What is the difference between a Python tuple and Python list?
+
+Answer: Lists are mutable and tuples are not mutable.
+
+Which of the following methods work both in Python lists and Python tuples?
+
+Answer: index()
+
+What will end up in the variable y after this code is executed?
+
+Answer: 4
+
+In the following Python code, what will end up in the variable y?
+
+Answer: A list of tuples
+
+Which of the following tuples is greater than x in the following Python sequence?
+
+Answer: (6, 0, 0)
+
+What does the following Python code accomplish, assuming the c is a non-empty dictionary?
+
+Answer: It creates a list of tuples where each tuple is a value, key pair.
+
+If the variable data is a Python list, how do we sort it in reverse order?
+
+Answer: data.sort(reverse=True)
+
+Using the following tuple, how would you print 'Wed'?
+
+Answer: print(days[2])
+
+In the following Python loop, why are there two iteration variables (k and v)?
+
+Answer: Because the items() method in dictionaries returns a list of tuples.
+
+Given that Python lists and Python tuples are quite similar - when might you prefer to use a tuple over a list?
+
+Answer: For a temporary variable that you will use and discard without modifying.
