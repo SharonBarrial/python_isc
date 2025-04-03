@@ -152,3 +152,35 @@ max_count = email_counts[max_email]
 print(max_email, max_count)
 
 
+
+
+"""
+10.2 Write a program to read through the mbox-short.txt and figure out the distribution by hour of the day for each of the messages. You can pull the hour out from the 'From ' line by finding the time and then splitting the string a second time using a colon.
+From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+Once you have accumulated the counts for each hour, print out the counts, sorted by hour as shown below.
+"""
+# Abrir el archivo
+file_name = "mbox-short.txt"
+handle = open(file_name)
+
+# Diccionario para almacenar los conteos de cada hora
+hour_counts = {}
+
+# Leer el archivo línea por línea
+for line in handle:
+    if line.startswith("From "):  # Filtra solo las líneas que comienzan con "From "
+        words = line.split()  
+        time = words[5]  # Extrae la parte de la hora (formato HH:MM:SS)
+        hour = time.split(":")[0]  # Obtiene solo la hora (HH)
+        
+        # Incrementa el contador para esa hora
+        hour_counts[hour] = hour_counts.get(hour, 0) + 1
+
+# Ordenar los resultados por hora
+sorted_hours = sorted(hour_counts.items())
+
+# Imprimir el resultado final
+for hour, count in sorted_hours:
+    print(hour, count)
+
+
